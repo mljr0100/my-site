@@ -8,5 +8,5 @@ module.exports = {
       },
     }, //开发服务器设置代理，解决跨域问题
   },
-  publicPath: './',
+  publicPath: '/my-site/dist',
 };
