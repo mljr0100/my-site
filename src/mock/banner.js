@@ -6,22 +6,22 @@ Mock.mock("/api/banner", "get", {
   data: [
     {
       id: "1",
-      midImg: "http://mdrs.yuanjin.tech/img/20201031141507.jpg",
-      bigImg: "http://mdrs.yuanjin.tech/img/20201031141350.jpg",
+      midImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
+      bigImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
       title: "天劫面前",
       description: "所谓神龙与大能，也不过是一群蝼蚁吧",
     },
     {
       id: "2",
-      midImg: "http://mdrs.yuanjin.tech/img/20201031205550.jpg",
-      bigImg: "http://mdrs.yuanjin.tech/img/20201031205551.jpg",
+      midImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
+      bigImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
       title: "千头万绪",
       description: "摸不着头脑，未曾砰然，便已心动",
     },
     {
       id: "3",
-      midImg: "http://mdrs.yuanjin.tech/img/20201031204401.jpg",
-      bigImg: "http://mdrs.yuanjin.tech/img/20201031204403.jpg",
+      midImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
+      bigImg: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fr.bstatic.com%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg&refer=http%3A%2F%2Fr.bstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640101324&t=5bcf26be53e4911e8067d9989742f79f",
       title: "千丈深渊",
       description: "未及心上一捧桃花源",
     },
