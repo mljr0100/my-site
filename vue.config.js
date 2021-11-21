@@ -1,4 +1,5 @@
-//vue-cli的配置文件
+//vue-cli的配置文件\
+console.log('mastere');
 module.exports = {
   devServer: {
     proxy: {
