@@ -4,8 +4,8 @@ import Blog from "@/views/Blog";
 import Message from "@/views/Message";
 import Project from "@/views/Project";
 import BlogDetail from "@/views/Blog/Detail";
-import { publishPath } from "../path";
-console.log("publishPath", publishPath);
+import { publicPath } from "../path";
+console.log("publicPath", publicPath);
 
 export default [
   { name: "Home", path: publishPath, component: Home },
