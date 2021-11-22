@@ -68,18 +68,12 @@ export default {
     window.removeEventListener("resize", this.setSize);
   },
   methods: {
-    //调用该方法，显示文字（从左到右，注意transition对width无效）
+    //调用该方法，显示文字
     showWords() {
-      this.$refs.title.style.opacity = 1;
       this.$refs.title.style.width = 0;
-      this.$refs.title.clientWidth; //reflow，强制渲染
-      this.$refs.title.style.transition = "2s";
-      this.$refs.title.style.width = this.titleWidth + "px";
-
-      this.$refs.desc.style.opacity = 1;
       this.$refs.desc.style.width = 0;
-      this.$refs.desc.clientWidth; //reflow，强制渲染
-      this.$refs.desc.style.transition = "2s 1s";
+      this.$refs.title.clientWidth; //reflow，强制渲染
+      this.$refs.title.style.width = this.titleWidth + "px";
       this.$refs.desc.style.width = this.descWidth + "px";
     }, //实现文字的0-->auto
     //调用该方法，更新容器和图片的宽高尺寸
@@ -129,16 +123,17 @@ export default {
     letter-spacing: 3px;
     white-space: nowrap;
     overflow: hidden;
-    opacity: 0;
   }
   .title {
     top: calc(50% - 40px);
     font-size: 2em;
+    transition: all 2s;
   }
   .desc {
     top: calc(50% + 10px);
     font-size: 1.2em;
     color: lighten(@gray, 20%);
+    transition: all 2s 1s;
   }
 }
 </style>
