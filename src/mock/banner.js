@@ -28,8 +28,8 @@ Mock.mock("/api/banner", "get", {
         "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic9.iqiyipic.com%2Fimage%2F20190107%2F51%2F1b%2Fv_123632584_m_601_160_90.jpg&refer=http%3A%2F%2Fpic9.iqiyipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640136349&t=8b188c839e4e6ddde1fe83c5aa5c5a48",
       bigImg:
         "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1113%2F051R0115229%2F20051Q15229-11-1200.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640136970&t=2b35e8ff944b259dbac6c6f19b55de18",
-      title: "千丈深渊",
-      description: "未及心上一捧桃花源",
+      title: "我希望有一天",
+      description: "国家昌明，百姓人人有事可做，我的将军不必死守边关",
     },
   ],
 });
