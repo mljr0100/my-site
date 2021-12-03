@@ -4,17 +4,15 @@ import qs from "querystring";
 Mock.mock("/api/blogtype", "get", {
   code: 0,
   msg: "",
-  "data|10-20": [
-    {
-      "id|+1": 1, //属性名为id，属性值自动+1，初始值为1
-      name: "分类@id",
-      "articleCount|0-300": 0, //该分类下文章的数量
-      "order|+1": 1, //分类列表应该按照order的顺序排序好
-    },
-  ],
+  "data|10-20": [{
+    "id|+1": 1, //属性名为id，属性值自动+1，初始值为1
+    name: "分类@id",
+    "articleCount|0-300": 0, //该分类下文章的数量
+    "order|+1": 1, //分类列表应该按照order的顺序排序好
+  }, ],
 });
 //模拟文章列表数据
-Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
+Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function (options) {
   // console.log(options); //请求地址的相关信息
   const query = qs.parse(options.url); //格式化分割地址栏参数
   // console.log(query);
@@ -38,8 +36,7 @@ Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
           "scanNumber|0-3000": 0, //文章浏览量
           "commentNumber|0-300": 30, //文章评论量
           "thumb|1": [
-            Mock.Random.image("300x250", "#000", "#fff", "Random Image"),
-            null,
+            '@image(300x250, @color, #fff, @natural)',
           ], //文章缩略图图片地址，有可能没有
           createDate: `@date('T')`, //文章发布日期的时间戳
         },
@@ -64,13 +61,21 @@ Mock.mock(/^\/api\/blog\/[^/]+$/, "get", {
     createDate: "@date('T')", //时间戳，创建日期
     toc: [
       // 博客章节目录
-      { name: "概述", anchor: "article-md-title-1" },
+      {
+        name: "概述",
+        anchor: "article-md-title-1"
+      },
       {
         name: "简单请求",
         anchor: "article-md-title-2",
-        children: [
-          { name: "简单请求的判定", anchor: "article-md-title-3" },
-          { name: "简单请求的交互规范", anchor: "article-md-title-4" },
+        children: [{
+            name: "简单请求的判定",
+            anchor: "article-md-title-3"
+          },
+          {
+            name: "简单请求的交互规范",
+            anchor: "article-md-title-4"
+          },
         ],
       },
       {
@@ -317,7 +322,7 @@ Mock.mock("/api/comment", "post", (options) => {
 //     },
 // });
 //模拟获取评论数据
-Mock.mock(/^\/api\/comment\/?(\?.+)?$/, "get", function(options) {
+Mock.mock(/^\/api\/comment\/?(\?.+)?$/, "get", function (options) {
   const query = qs.parse(options.url);
   return Mock.mock({
     code: 0,

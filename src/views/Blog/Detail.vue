@@ -14,13 +14,14 @@
 
 <script>
 import fetchData from "@/mixins/fetchData.js";
+import mainScroll from "@/mixins/mainScroll.js";
 import { getBlog } from "@/api/blog.js";
 import Layout from "@/components/Layout";
 import BlogDetail from "./components/BlogDetail";
 import BlogComment from "./components/BlogComment";
 import BlogTOC from "./components/BlogTOC";
 export default {
-  mixins: [fetchData(null)],
+  mixins: [fetchData(null), mainScroll("mainContainer")],
   components: {
     Layout,
     BlogDetail,
@@ -38,15 +39,6 @@ export default {
     async fetchData() {
       return await getBlog(this.$route.params.id);
     },
-    handleScroll() {
-      this.$bus.$emit("mainScroll", this.$refs.mainContainer); //往事件总线里面注册事件并且传递参数
-    },
-  },
-  mounted() {
-    this.$refs.mainContainer.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    this.$refs.mainContainer.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>

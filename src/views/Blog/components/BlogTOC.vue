@@ -7,7 +7,7 @@
 
 <script>
 import RightList from "./RightList";
-import { debounce } from "@utils";
+import { debounce } from "@/utils";
 export default {
   components: {
     RightList,

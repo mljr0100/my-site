@@ -59,13 +59,14 @@
 <script>
 import Pager from "@/components/Pager"; //分页组件
 import fetchData from "@/mixins/fetchData.js"; //导入需要混合的代码（获取远程数据）
+import mainScroll from "@/mixins/mainScroll.js";
 import { getBlogs } from "@/api/blog.js"; //导入远程获取数据的方法
 import { formatDate } from "@/utils";
 export default {
   components: {
     Pager,
   },
-  mixins: [fetchData({})],
+  mixins: [fetchData({}), mainScroll("container")],
   methods: {
     formatDate,
     async fetchData() {
