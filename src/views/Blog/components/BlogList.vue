@@ -11,7 +11,12 @@
               },
             }"
             ><!--点击超链接会跳转到文章的详情页-->
-            <img :src="item.thumb" :alt="item.title" :title="item.title" />
+            <img
+              v-lazy="item.thumb"
+              :src="item.thumb"
+              :alt="item.title"
+              :title="item.title"
+            />
           </RouterLink>
         </div>
         <div class="main">
